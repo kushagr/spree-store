@@ -1,0 +1,7 @@
+<% if @wishlist.products.empty? %>
+  <h3>There are no products in your wishlist</h3>
+<%else%>
+  <% @wishlist.products.each do |product| %>
+    <p><%= link_to product.name, spree.product_path(product) %></p>
+  <% end %>
+<% end %>
